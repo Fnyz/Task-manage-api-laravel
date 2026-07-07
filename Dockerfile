@@ -10,8 +10,9 @@ RUN apk add --no-cache \
         freetype-dev \
         libzip-dev \
         oniguruma-dev \
+        postgresql-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo pdo_mysql mbstring zip gd opcache
+    && docker-php-ext-install pdo pdo_mysql pdo_pgsql pgsql mbstring zip gd opcache
 
 # Install Composer from official image
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
