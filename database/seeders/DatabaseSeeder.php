@@ -22,9 +22,9 @@ class DatabaseSeeder extends Seeder
 
         // Fixed, known user you'll actually log in and test with
         $user = User::factory()->create([
-            'name' => 'John Doe',
-            'email' => 'john@example.com',
-            'password' => 'password123'
+            'name' => 'Admin User',
+            'email' => 'admin@example.com',
+            'password' => 'admin123', // Password will be hashed by the model's mutator
         ]);
 
         // Create 5 categories for the user

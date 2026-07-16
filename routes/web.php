@@ -7,6 +7,12 @@ Route::get('/', function () {
         'name' => 'Task Manager API',
         'version' => 'v1',
         'status' => 'active',
+        'note'    => 'This API is in read-only mode. Add, update, and delete operations are disabled. Use the test credentials below to explore the API.',
+        'test_credentials' => [
+            'email'    => 'admin@example.com',
+            'password' => 'admin123',
+            'note'     => 'Login via POST /api/v1/login to get a Bearer token, then use it to access protected endpoints.',
+        ],
         'endpoints' => [
             'auth' => [
                 'register' => 'POST /api/v1/register',
